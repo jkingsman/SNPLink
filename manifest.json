@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "SNPLink",
+    "version": "1.0.0",
+    "description": "Display relevant SNPs on pages when browsed",
+    "author": "Jack Kingsman <jack.kingsman@gmail.com>",
+    "icons": {
+		"16":"img/dna-16.png",
+		"20":"img/dna-20.png",
+		"48":"img/dna-48.png",
+		"128":"img/dna-128.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["js/content_script.js"],
+        "run_at": "document_end"
+    }],
+    "options_page": "html/options.html",
+    "permissions": ["storage", "unlimitedStorage"]
+}
